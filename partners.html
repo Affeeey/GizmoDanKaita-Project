@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Partners - Gizmodankaita Office Plus</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .navbar {
+            background-color: var(--primary);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 15px 0;
+            transition: all 0.3s;
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: white !important;
+        }
+        
+        .nav-link {
+            color: rgba(255,255,255,0.85) !important;
+            font-weight: 500;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        
+        .nav-link:hover {
+            color: white !important;
+        }
+        
+        .page-hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 120px 0 60px;
+            text-align: center;
+        }
+        
+        .page-content {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--secondary);
+            margin: 15px auto;
+        }
+        
+        .partners {
+            padding: 60px 0;
+        }
+        
+        .partner-logo {
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: all 0.3s;
+            max-height: 80px;
+            margin: 20px auto;
+            display: block;
+        }
+        
+        .partner-logo:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+        
+        .partner-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            height: 100%;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+            margin-bottom: 30px;
+        }
+        
+        .partner-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 60px 0 20px;
+        }
+        
+        .footer-links h5 {
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-links h5:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 40px;
+            height: 2px;
+            background: var(--secondary);
+        }
+        
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            margin-right: 10px;
+            color: white;
+            transition: all 0.3s;
+        }
+        
+        .social-icons a:hover {
+            background: var(--secondary);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            margin-top: 40px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.7);
+        }
+        
+        @media (max-width: 768px) {
+            .page-hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Gizmodankaita Office Plus</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="team.html">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="partners.html">Partners</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Our Partners</h1>
+            <p class="lead">Collaborating with leading institutions to amplify our impact</p>
+        </div>
+    </section>
+
+    <!-- Partners Content -->
+    <section class="page-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="section-title">Strategic Partnerships</h2>
+                    <p class="text-center mb-5">We believe in the power of collaboration. Our partnerships with educational institutions and organizations help us extend our reach and impact in the community.</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="partner-card">
+                        <img src="https://via.placeholder.com/200x100/3498db/ffffff?text=KSITM" alt="Katsina State Institute of Technology and Management" class="partner-logo">
+                        <h4>Katsina State Institute of Technology and Management</h4>
+                        <p>We collaborate with KSITM on various tech education initiatives, including workshops, training programs, and knowledge exchange activities that benefit both students and faculty.</p>
+                        <p><strong>Collaboration Areas:</strong> Tech workshops, Student mentorship, Curriculum development</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="partner-card">
+                        <img src="https://via.placeholder.com/200x100/e74c3c/ffffff?text=UMYU" alt="Umaru Musa Yar'adua University" class="partner-logo">
+                        <h4>Umaru Musa Yar'adua University</h4>
+                        <p>Our partnership with UMYU focuses on entrepreneurship development and research collaborations. We work together to foster innovation and support student-led startups.</p>
+                        <p><strong>Collaboration Areas:</strong> Entrepreneurship programs, Research projects, Startup incubation</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="partner-card">
+                        <img src="https://via.placeholder.com/200x100/2c3e50/ffffff?text=Alqalam" alt="Alqalam University Katsina" class="partner-logo">
+                        <h4>Alqalam University Katsina</h4>
+                        <p>We partner with Alqalam University to promote tech education and digital literacy. Our joint initiatives include coding bootcamps, tech awareness programs, and skill development workshops.</p>
+                        <p><strong>Collaboration Areas:</strong> Digital literacy, Coding bootcamps, Tech awareness programs</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="partner-card">
+                        <img src="https://via.placeholder.com/200x100/3498db/ffffff?text=Gafai" alt="Gafai Communications" class="partner-logo">
+                        <h4>Gafai Communications</h4>
+                        <p>Our partnership with Gafai Communications focuses on IT infrastructure development and digital solutions for businesses and educational institutions in the region.</p>
+                        <p><strong>Collaboration Areas:</strong> IT solutions, Infrastructure development, Digital transformation</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-12 text-center">
+                    <h3>Become a Partner</h3>
+                    <p class="lead">Interested in partnering with us to make a greater impact?</p>
+                    <a href="contact.html" class="btn btn-primary btn-lg">Get In Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 footer-links">
+                    <h5>Gizmodankaita Office Plus</h5>
+                    <p>Empowering entrepreneurs with consultancy services and promoting tech education through workshops and training programs.</p>
+                </div>
+                <div class="col-lg-2 col-md-6 footer-links">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h5>Our Services</h5>
+                    <ul>
+                        <li><a href="services.html">Entrepreneur Consultancy</a></li>
+                        <li><a href="services.html">Tech Training</a></li>
+                        <li><a href="services.html">School Workshops</a></li>
+                        <li><a href="services.html">IT Solutions</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h5>Contact Info</h5>
+                    <p><i class="fas fa-map-marker-alt"></i> Katsina, Nigeria</p>
+                    <p><i class="fas fa-envelope"></i> gizmodankaitaofficeplus@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +234 XXX XXX XXXX</p>
+                    <div class="social-icons mt-3">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Gizmodankaita Office Plus. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Navbar background change on scroll
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                document.querySelector('.navbar').style.background = 'rgba(44, 62, 80, 0.95)';
+                document.querySelector('.navbar').style.padding = '10px 0';
+            } else {
+                document.querySelector('.navbar').style.background = 'var(--primary)';
+                document.querySelector('.navbar').style.padding = '15px 0';
+            }
+        });
+    </script>
+</body>
+</html>

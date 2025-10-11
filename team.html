@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Departments - Gizmodankaita Office Plus</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .navbar {
+            background-color: var(--primary);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 15px 0;
+            transition: all 0.3s;
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: white !important;
+        }
+        
+        .nav-link {
+            color: rgba(255,255,255,0.85) !important;
+            font-weight: 500;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        
+        .nav-link:hover {
+            color: white !important;
+        }
+        
+        .page-hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 120px 0 60px;
+            text-align: center;
+        }
+        
+        .page-content {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--secondary);
+            margin: 15px auto;
+        }
+        
+        .department-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 40px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--secondary);
+        }
+        
+        .department-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--light);
+        }
+        
+        .department-icon {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-right: 20px;
+        }
+        
+        .team-member {
+            text-align: center;
+            margin-bottom: 30px;
+            transition: transform 0.3s;
+        }
+        
+        .team-member:hover {
+            transform: translateY(-5px);
+        }
+        
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--light);
+            margin-bottom: 15px;
+        }
+        
+        .contact-info {
+            background: var(--light);
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+        
+        .contact-icon {
+            font-size: 1rem;
+            color: var(--secondary);
+            margin-right: 10px;
+        }
+        
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 60px 0 20px;
+        }
+        
+        .footer-links h5 {
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-links h5:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 40px;
+            height: 2px;
+            background: var(--secondary);
+        }
+        
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            margin-right: 10px;
+            color: white;
+            transition: all 0.3s;
+        }
+        
+        .social-icons a:hover {
+            background: var(--secondary);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            margin-top: 40px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.7);
+        }
+        
+        @media (max-width: 768px) {
+            .page-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .department-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .department-icon {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Gizmodankaita Office Plus</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="team.html">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="departments.html">Departments</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="partners.html">Partners</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Our Departments</h1>
+            <p class="lead">Meet our specialized teams working together to empower entrepreneurs and promote tech education</p>
+        </div>
+    </section>
+
+    <!-- Departments Content -->
+    <section class="page-content">
+        <div class="container">
+            <!-- Entrepreneurs Department -->
+            <div class="department-card">
+                <div class="department-header">
+                    <div class="department-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div>
+                        <h2>Entrepreneurs Department</h2>
+                        <p class="lead">Guiding startups and businesses to success through strategic consultancy and mentorship</p>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="team-member">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Almustapha">
+                            <h4>Fatima Umar Garba Phd.</h4>
+                            <p>Head of Entrepreneurs</p>
+                            <p>Leadership of the entreprenural team, responsible for overall strategy and direction</p>
+                            <div class="contact-info">
+                                <p><i class="fas fa-envelope contact-icon"></i>gizmodankaita@gmail.com</p>
+                                <p><i class="fas fa-phone contact-icon"></i> +234 708 828 2716</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="team-member">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Ibrahim">
+                            <h4>Rahama Usman</h4>
+                            <p>Director of Innovation</p>
+                            <p>Oversees new project development and innovation initiatives</p>
+                            <div class="contact-info">
+                                <p><i class="fas fa-envelope contact-icon"></i> gizmoofficeplus@gmail.com</p>
+                                <p><i class="fas fa-phone contact-icon"></i> +234 703 3131 771</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="team-member">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Fatima">
+                            <h4>Fiddausi Aminu Maaji</h4>
+                            <p>Business Development Manager</p>
+                            <p>Focuses on partnership, networking and business growth</p>
+                            <div class="contact-info">
+                                <p><i class="fas fa-envelope contact-icon"></i>gizmoofficeplus@gmail.com</p>
+                                <p><i class="fas fa-phone contact-icon"></i> +234 903 2260 630</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="team-member">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Musa">
+                            <h4>Rabi'atu Umar Faruk</h4>
+                            <p>Startup Lead</p>
+                            <div class="contact-info">
+                                <p><i class="fas fa-envelope contact-icon"></i> gizmoofficeplus@gmail.com</p>
+                                <p></p>
+                                <p><i class="fas fa-phone contact-icon"></i> +234 816 372 2490</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="team-member">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Musa">
+                            <h4>Maimuna Hamisu Ifo Phd.</h4>
+                            <p>Startup Lead</p>
+                            <div class="contact-info">
+                                <p><i class="fas fa-envelope contact-icon"></i> gizmoofficeplus@gmail.com</p>
+                                <p></p>
+                                <p><i class="fas fa-phone contact-icon"></i> +234 705 333 4005</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="team-member">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Musa">
+                            <h4>Shamsiyya Hamza</h4>
+                            <p>Talent Acquisotion Manager</p>
+                            <div class="contact-info">
+                                <p><i class="fas fa-envelope contact-icon"></i> gizmoofficeplus@gmail.com</p>
+                                <p></p>
+                                <p><i class="fas fa-phone contact-icon"></i> +234 803 050 3654</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="team-member">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Musa">
+                            <h4>Asiya Lawal</h4>
+                            <p>Operation Manager</p>
+                            <div class="contact-info">
+                                <p><i class="fas fa-envelope contact-icon"></i> gizmoofficeplus@gmail.com</p>
+                                <p></p>
+                                <p><i class="fas fa-phone contact-icon"></i> +234 906 497 7801</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="team-member">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Musa">
+                            <h4>Aisha Muhammad Lawal</h4>
+                            <p>Associate Entrepreneur</p>
+                            <div class="contact-info">
+                                <p><i class="fas fa-envelope contact-icon"></i> gizmoofficeplus@gmail.com</p>
+                                <p></p>
+                                <p><i class="fas fa-phone contact-icon"></i> +234 813 875 2793</p>
+                            </div>
+                        </div>
+                    </div>
+
+                   
+                </div>
+                
+                <div class="department-contact mt-4">
+                    <h5>Department Contact</h5>
+                    <p><i class="fas fa-envelope contact-icon"></i> entrepgizmoofficeplus@gmail.com</p>
+                    <p><i class="fas fa-phone contact-icon"></i> +234 805 678 9012 (Department Line)</p>
+                </div>
+            </div>
+
+            <!-- Software Engineers Department -->
+            <div class="department-card">
+                <div class="department-header">
+                    <div class="department-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <div>
+                        <h2>Tech Department</h2>
+                        <p class="lead">Creating innovative digital solutions and applications for businesses and education</p>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="team-member">
+                            <img src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Abubakar Abdullatif">
+                            <h4>Abdulhafeez</h4>
+                            <p>Computer Engineer</p>
+                            <div class="contact-info">
+                                <p><i class="fas fa-envelope contact-icon"></i> gizmoofficeplus@gmail.com</p>
+                                <p><i class="fas fa-phone contact-icon"></i> +234 806 789 0123</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="team-member">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Muhammad Bashir Harisu">
+                            <h4>Muhammad Bashir Harisu</h4>
+                            <p>Software Developer</p>
+                            <div class="contact-info">
+                                <p><i class="fas fa-envelope contact-icon"></i>gizmoofficeplus@gmail.com</p>
+                                <p><i class="fas fa-phone contact-icon"></i> +234 807 890 1234</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="team-member">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Aisha">
+                            <h4>Abubakar Abdullatif</h4>
+                            <p>App Developer</p>
+                            <div class="contact-info">
+                                <p><i class="fas fa-envelope contact-icon"></i>gizmoofficeplus@gmail.com</p>
+                                <p><i class="fas fa-phone contact-icon"></i> +234 808 901 2345</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="team-member">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Yusuf">
+                            <h4>Almustapha</h4>
+                            <p>Project Manager</p>
+                            <div class="contact-info">
+                                <p><i class="fas fa-envelope contact-icon"></i>igizmoofficeplus@gmail.com</p>
+                                <p><i class="fas fa-phone contact-icon"></i> +234 809 012 3456</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="department-contact mt-4">
+                    <h5>Department Contact</h5>
+                    <p><i class="fas fa-envelope contact-icon"></i> gizmoofficeplus@gmail.com</p>
+                    <p><i class="fas fa-phone contact-icon"></i> +234 810 123 4567 (Department Line)</p>
+                </div>
+            </div>
+
+            <!-- Computer Engineers Department -->
+<!--             <div class="department-card">
+                <div class="department-header">
+                    <div class="department-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <div>
+                        <h2>Computer Engineers Department</h2>
+                        <p class="lead">Designing and implementing hardware and software solutions for technological advancement</p>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="team-member">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Mr Abdulhafeez">
+                            <h4>Mr Abdulhafeez</h4>
+                            <p>Head of Computer Engineering</p>
+                            <div class="contact-info">
+                                <p><i class="fas fa-envelope contact-icon"></i> gizmoofficeplus@gmail.com</p>
+                                <p><i class="fas fa-phone contact-icon"></i> +234 811 234 5678</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="team-member">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Halima">
+                            <h4>Halima Ibrahim</h4>
+                            <p>Systems Architect</p>
+                            <div class="contact-info">
+                                <p><i class="fas fa-envelope contact-icon"></i>gizmoofficeplus@gmail.com</p>
+                                <p><i class="fas fa-phone contact-icon"></i> +234 812 345 6789</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="team-member">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Sani">
+                            <h4>Sani Mohammed</h4>
+                            <p>Network Engineer</p>
+                            <div class="contact-info">
+                                <p><i class="fas fa-envelope contact-icon"></i>gizmoofficeplus@gmail.com</p>
+                                <p><i class="fas fa-phone contact-icon"></i> +234 813 456 7890</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="team-member">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Zainab">
+                            <h4>Zainab Abdullahi</h4>
+                            <p>Hardware Specialist</p>
+                            <div class="contact-info">
+                                <p><i class="fas fa-envelope contact-icon"></i>gizmoofficeplus@gmail.com</p>
+                                <p><i class="fas fa-phone contact-icon"></i> +234 814 567 8901</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="department-contact mt-4">
+                    <h5>Department Contact</h5>
+                    <p><i class="fas fa-envelope contact-icon"></i>gizmoofficeplus@gmail.com</p>
+                    <p><i class="fas fa-phone contact-icon"></i> +234 815 678 9012 (Department Line)</p>
+                </div>
+            </div>
+ -->
+            <!-- Admin Department -->
+           <!--  <div class="department-card">
+                <div class="department-header">
+                    <div class="department-icon">
+                        <i class="fas fa-users-cog"></i>
+                    </div>
+                    <div>
+                        <h2>Administration Department</h2>
+                        <p class="lead">Managing operations, coordination, and community engagement initiatives</p>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="team-member">
+                            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Maryam">
+                            <h4>Maryam</h4>
+                            <p>Community Coordinator</p>
+                            <div class="contact-info">
+                                <p><i class="fas fa-envelope contact-icon"></i>gizmoofficeplus@gmail.com</p>
+                                <p><i class="fas fa-phone contact-icon"></i> +234 816 789 0123</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="team-member">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Aminu">
+                            <h4>Aminu Suleiman</h4>
+                            <p>Operations Manager</p>
+                            <div class="contact-info">
+                                <p><i class="fas fa-envelope contact-icon"></i>gizmoofficeplus@gmail.com</p>
+                                <p><i class="fas fa-phone contact-icon"></i> +234 817 890 1234</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="team-member">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Bello">
+                            <h4>Bello Abdullahi</h4>
+                            <p>Finance Officer</p>
+                            <div class="contact-info">
+                                <p><i class="fas fa-envelope contact-icon"></i>gizmoofficeplus@gmail.com</p>
+                                <p><i class="fas fa-phone contact-icon"></i> +234 819 012 3456</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="department-contact mt-4">
+                    <h5>Department Contact</h5>
+                    <p><i class="fas fa-envelope contact-icon"></i>gizmoofficeplus@gmail.com</p>
+                    <p><i class="fas fa-phone contact-icon"></i> +234 820 123 4567 (Department Line)</p>
+                </div>
+            </div> -->
+
+            <!-- General Contact Information -->
+            <div class="row mt-5">
+                <div class="col-12 text-center">
+                    <h3>General Contact Information</h3>
+                    <p class="lead">For general inquiries or to reach our main office</p>
+                    <div class="contact-info mt-4 p-4" style="max-width: 600px; margin: 0 auto;">
+                        <p><i class="fas fa-envelope contact-icon"></i> gizmoofficeplus@gmail.com</p>
+                        <p><i class="fas fa-phone contact-icon"></i> +234 821 234 5678 (Main Office)</p>
+                        <p><i class="fas fa-map-marker-alt contact-icon"></i> Katsina, Nigeria</p>
+                        <p><i class="fas fa-clock contact-icon"></i> Mon-Fri: 9:00 AM - 6:00 PM</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 footer-links">
+                    <h5>Gizmodankaita Office Plus</h5>
+                    <p>Empowering entrepreneurs with consultancy services and promoting tech education through workshops and training programs.</p>
+                </div>
+                <div class="col-lg-2 col-md-6 footer-links">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="team.html">Team</a></li>
+                        <li><a href="departments.html">Departments</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h5>Our Services</h5>
+                    <ul>
+                        <li><a href="services.html">Entrepreneur Consultancy</a></li>
+                        <li><a href="services.html">Tech Training</a></li>
+                        <li><a href="services.html">School Workshops</a></li>
+                        <li><a href="services.html">IT Solutions</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h5>Contact Info</h5>
+                    <p><i class="fas fa-map-marker-alt"></i> Katsina, Nigeria</p>
+                    <p><i class="fas fa-envelope"></i> gizmoofficeplus@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +234 821 234 5678</p>
+                    <div class="social-icons mt-3">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Gizmodankaita Office Plus. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Navbar background change on scroll
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                document.querySelector('.navbar').style.background = 'rgba(44, 62, 80, 0.95)';
+                document.querySelector('.navbar').style.padding = '10px 0';
+            } else {
+                document.querySelector('.navbar').style.background = 'var(--primary)';
+                document.querySelector('.navbar').style.padding = '15px 0';
+            }
+        });
+    </script>
+</body>
+</html>
