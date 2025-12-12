@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gizmo Dan Kaita Office Plus - ICT Solutions & Services</title>
+    <title>About Us - Gizmo Dan Kaita Office Plus</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+        /* Same styles as homepage */
         :root {
             --primary: #2c3e50;
             --secondary: #3498db;
@@ -45,36 +46,15 @@
             color: white !important;
         }
         
-        .hero {
+        .page-hero {
             background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
             color: white;
-            padding: 120px 0 80px;
+            padding: 120px 0 60px;
             text-align: center;
         }
         
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
-        
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto 30px;
-        }
-        
-        .btn-primary {
-            background-color: var(--accent);
-            border: none;
-            padding: 12px 30px;
-            font-weight: 600;
-            transition: all 0.3s;
-        }
-        
-        .btn-primary:hover {
-            background-color: #c0392b;
-            transform: translateY(-2px);
+        .page-content {
+            padding: 80px 0;
         }
         
         .section-title {
@@ -92,30 +72,33 @@
             margin: 15px auto;
         }
         
-        .services {
-            background-color: var(--light);
-            padding: 80px 0;
+        .values-list {
+            list-style: none;
+            padding: 0;
         }
         
-        .service-card {
+        .values-list li {
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        .values-list li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+            font-weight: bold;
+        }
+        
+        .value-card {
             background: white;
             border-radius: 10px;
             padding: 30px;
-            text-align: center;
             height: 100%;
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s;
             margin-bottom: 30px;
-        }
-        
-        .service-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .service-icon {
-            font-size: 3rem;
-            color: var(--secondary);
-            margin-bottom: 20px;
+            border-top: 4px solid var(--secondary);
         }
         
         footer {
@@ -205,12 +188,8 @@
         }
         
         @media (max-width: 768px) {
-            .hero h1 {
+            .page-hero h1 {
                 font-size: 2.5rem;
-            }
-            
-            .hero p {
-                font-size: 1rem;
             }
         }
     </style>
@@ -226,10 +205,10 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Home</a>
+                        <a class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
+                        <a class="nav-link active" href="about.html">About</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="services.html">Services</a>
@@ -237,7 +216,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="team.html">Senior Management</a>
                     </li>
-                    <<!-- li class="nav-item">
+                   <!--  <li class="nav-item">
                         <a class="nav-link" href="departments.html">Departments</a>
                     </li> -->
                     <li class="nav-item">
@@ -248,123 +227,88 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- Page Hero -->
+    <section class="page-hero">
         <div class="container">
-            <h1>Your Automation Partner</h1>
-            <p>Dedicated to improving businesses and communities through innovative ICT solutions. We bridge the digital divide by providing accessible technology, literacy, and promoting entrepreneurship.</p>
-            <a href="services.html" class="btn btn-primary btn-lg">Explore Our Services</a>
+            <h1>About Gizmo Dan Kaita Office Plus</h1>
+            <p class="lead">Your trusted automation partner for innovative ICT solutions</p>
         </div>
     </section>
 
-    <!-- Company Info -->
-    <section class="py-5">
+    <!-- About Content -->
+    <section class="page-content">
         <div class="container">
             <div class="company-info">
                 <div class="rc-number">RC. 7343096</div>
-                <h2>Gizmo Dan Kaita Office Plus</h2>
-                <p><strong>CEO:</strong> Abdulhafiz Haruna Garba Kaita</p>
-                <p><strong>Email:</strong> gizmoofficeplus@gmail.com</p>
-                <p><strong>Phone:</strong> 08161483851</p>
-                <p><strong>Address:</strong> NO. 24, KOFAR KAURA Upstairs Gafai Communication, KATSINA, KATSINA STATE, NIGERIA</p>
+                <h2>Company Profile</h2>
+                <p>Gizmo Dan Kaita Office Plus is dedicated to improving businesses and communities through innovative solutions. Our research is helping bridge the digital divide and we are committed to delivering exceptional quality in our products and services.</p>
+                <p>We extend our services to understanding your specific ICT needs and resources. Our commitment to support and providing optimal solutions through modern tools, customer service and effective utilization sets us apart.</p>
             </div>
-        </div>
-    </section>
 
-    <!-- Services Preview -->
-    <section class="services">
-        <div class="container">
-            <h2 class="section-title">Our Services</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-laptop"></i>
-                        </div>
-                        <h4>Computer Sales & Repairs</h4>
-                        <p>Sales of computers, accessories, repairs and maintenance services with expertise in hardware and software issues.</p>
-                        <a href="services.html" class="btn btn-outline-primary mt-3">Learn More</a>
-                    </div>
+            <div class="row mb-5">
+                <div class="col-lg-6">
+                    <h3 class="section-title">Our Mission</h3>
+                    <p>Our mission is to bridge the digital divide by providing accessible technology, literacy, and promoting entrepreneurship. We strive for 100% customer satisfaction by delivering quality services and maintaining an unwavering commitment to ongoing development.</p>
                 </div>
-                <div class="col-md-4">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-network-wired"></i>
-                        </div>
-                        <h4>Networking Solutions</h4>
-                        <p>Infrastructure development, internet and Wi-Fi installations, network design and implementation.</p>
-                        <a href="services.html" class="btn btn-outline-primary mt-3">Learn More</a>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <h4>Security Systems</h4>
-                        <p>Cybersecurity services, security system installations, threat protection and monitoring solutions.</p>
-                        <a href="services.html" class="btn btn-outline-primary mt-3">Learn More</a>
-                    </div>
+                <div class="col-lg-6">
+                    <h3 class="section-title">Our Vision</h3>
+                    <p>To establish ourselves as a prominent entity in technological solutions, creating unconditional response from our targeted culture. We aspire to be the leading automation partner with a unique experience in implementation and growth.</p>
                 </div>
             </div>
-            <div class="text-center mt-4">
-                <a href="services.html" class="btn btn-primary">View All Services</a>
-            </div>
-        </div>
-    </section>
 
-    <!-- Mission & Vision -->
-    <section class="py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 mb-4">
-                    <div class="service-card">
-                        <h3>Our Mission</h3>
-                        <p>To bridge the digital divide by providing accessible technology, literacy, and promoting entrepreneurship. We strive for 100% customer satisfaction by delivering quality services and maintaining an unwavering commitment to ongoing development.</p>
-                    </div>
-                </div>
-                <div class="col-lg-6 mb-4">
-                    <div class="service-card">
-                        <h3>Our Vision</h3>
-                        <p>To establish ourselves as a prominent entity in technological solutions, creating unconditional response from our targeted culture. We aspire to be the leading automation partner with a unique experience in implementation and growth.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Community Initiatives -->
-    <section class="services">
-        <div class="container">
-            <h2 class="section-title">Community Initiatives</h2>
+            <h2 class="section-title">Our Values</h2>
             <div class="row">
                 <div class="col-md-6">
-                    <div class="service-card">
-                        <h4>Unlocking the Potential of Our Children</h4>
-                        <p>A program focused on digital literacy and entrepreneurship for the younger generation.</p>
+                    <div class="value-card">
+                        <h4>Innovation</h4>
+                        <p>We strive to stay ahead of the curve, embracing cutting-edge technology to drive growth. Embracing innovation fuels our ability to stay at the forefront of technological advancements.</p>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="service-card">
-                        <h4>Dreams to Reality</h4>
-                        <p>A transformative program for secondary schools to inspire and equip students with technological skills.</p>
+                    <div class="value-card">
+                        <h4>Community</h4>
+                        <p>We prioritize community development, empowering individuals and businesses to thrive. We believe in collective responsibility and leadership for accountability and development.</p>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="service-card">
-                        <h4>Empowering Katsina State's Future Leaders</h4>
-                        <p>Initiatives to develop the next generation of leaders through technology education.</p>
+                    <div class="value-card">
+                        <h4>Integrity</h4>
+                        <p>We operate with transparency, honesty, and accountability. Upholding professionalism and ethics in all our business conduct is fundamental to our operations.</p>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="service-card">
-                        <h4>Some of our clients</h4>
-                        <p>Katsina State Government House</p>
-                        <p>Katsina State Intitute if Technology and Management</p>
-                        <p>Katsina State Internal Revenue Services</p>
-                        <p>Katsina State Little Angels School</p>
-                        <p>And more ..............</p>
+                    <div class="value-card">
+                        <h4>Excellence</h4>
+                        <p>We pursue exceptional quality in our products, services, and customer experiences. We strive for excellence in all aspects of our work, delivering the highest-quality solutions.</p>
                     </div>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-12">
+                    <h2 class="section-title">Our Commitment to Development</h2>
+                </div>
+                <div class="col-md-6">
+                    <ul class="values-list">
+                        <li><strong>Desire for Excellence:</strong> We strive for excellence in all aspects of our work, delivering the highest-quality solutions.</li>
+                        <li><strong>Trust and Confidence Build-up:</strong> Building trust and capabilities to achieve results with clients and within our team.</li>
+                        <li><strong>Innovation:</strong> Embracing innovation fuels our ability to stay at the forefront of technological advancements.</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <ul class="values-list">
+                        <li><strong>Transparency:</strong> We prioritize transparent communication, building trust with our clients and partners.</li>
+                        <li><strong>Teamwork:</strong> Collaboration and framework are at the heart of our approach, ensuring projects mature through shared achievements.</li>
+                        <li><strong>Adding Value to Client Needs:</strong> We are dedicated to adding value to our clients' needs, ensuring we deliver beyond expectations.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-12">
+                    <h2 class="section-title">Area of Expertise</h2>
+                    <p class="text-center">Our main strength lies in the blend of professionals, specialized and highly focused on extensive experience in computer repair, with expertise in both hardware and software issues. We are proficient in diagnosing and resolving a wide range of problems, from simple fixes to complex issues. We are confident in our ability to provide high-quality professional services and have a track record of satisfaction from our customers.</p>
+                    <p class="text-center fw-bold mt-4">Our client's satisfaction is our major concern. We guarantee you good and qualitative service.</p>
                 </div>
             </div>
         </div>

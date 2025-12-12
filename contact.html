@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gizmo Dan Kaita Office Plus - ICT Solutions & Services</title>
+    <title>Contact Us - Gizmo Dan Kaita Office Plus</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+        /* Same styles as homepage */
         :root {
             --primary: #2c3e50;
             --secondary: #3498db;
@@ -45,36 +46,15 @@
             color: white !important;
         }
         
-        .hero {
+        .page-hero {
             background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
             color: white;
-            padding: 120px 0 80px;
+            padding: 120px 0 60px;
             text-align: center;
         }
         
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
-        
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto 30px;
-        }
-        
-        .btn-primary {
-            background-color: var(--accent);
-            border: none;
-            padding: 12px 30px;
-            font-weight: 600;
-            transition: all 0.3s;
-        }
-        
-        .btn-primary:hover {
-            background-color: #c0392b;
-            transform: translateY(-2px);
+        .page-content {
+            padding: 80px 0;
         }
         
         .section-title {
@@ -92,30 +72,26 @@
             margin: 15px auto;
         }
         
-        .services {
-            background-color: var(--light);
+        .contact {
             padding: 80px 0;
         }
         
-        .service-card {
-            background: white;
-            border-radius: 10px;
-            padding: 30px;
-            text-align: center;
-            height: 100%;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s;
+        .contact-info {
             margin-bottom: 30px;
         }
         
-        .service-card:hover {
-            transform: translateY(-5px);
+        .contact-icon {
+            font-size: 1.5rem;
+            color: var(--secondary);
+            margin-right: 15px;
         }
         
-        .service-icon {
-            font-size: 3rem;
-            color: var(--secondary);
-            margin-bottom: 20px;
+        .contact-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            height: 100%;
         }
         
         footer {
@@ -186,31 +162,22 @@
             color: rgba(255,255,255,0.7);
         }
         
-        .company-info {
-            background: white;
-            border-radius: 10px;
-            padding: 30px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            margin-bottom: 30px;
+        .btn-primary {
+            background-color: var(--accent);
+            border: none;
+            padding: 12px 30px;
+            font-weight: 600;
+            transition: all 0.3s;
         }
         
-        .rc-number {
-            background: var(--secondary);
-            color: white;
-            padding: 5px 15px;
-            border-radius: 5px;
-            display: inline-block;
-            font-weight: bold;
-            margin-bottom: 15px;
+        .btn-primary:hover {
+            background-color: #c0392b;
+            transform: translateY(-2px);
         }
         
         @media (max-width: 768px) {
-            .hero h1 {
+            .page-hero h1 {
                 font-size: 2.5rem;
-            }
-            
-            .hero p {
-                font-size: 1rem;
             }
         }
     </style>
@@ -226,7 +193,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Home</a>
+                        <a class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="about.html">About</a>
@@ -237,134 +204,75 @@
                     <li class="nav-item">
                         <a class="nav-link" href="team.html">Senior Management</a>
                     </li>
-                    <<!-- li class="nav-item">
+                   <!--  <li class="nav-item">
                         <a class="nav-link" href="departments.html">Departments</a>
                     </li> -->
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
+                        <a class="nav-link active" href="contact.html">Contact</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- Page Hero -->
+    <section class="page-hero">
         <div class="container">
-            <h1>Your Automation Partner</h1>
-            <p>Dedicated to improving businesses and communities through innovative ICT solutions. We bridge the digital divide by providing accessible technology, literacy, and promoting entrepreneurship.</p>
-            <a href="services.html" class="btn btn-primary btn-lg">Explore Our Services</a>
+            <h1>Contact Us</h1>
+            <p class="lead">Get in touch to discuss your ICT needs and how we can help</p>
         </div>
     </section>
 
-    <!-- Company Info -->
-    <section class="py-5">
-        <div class="container">
-            <div class="company-info">
-                <div class="rc-number">RC. 7343096</div>
-                <h2>Gizmo Dan Kaita Office Plus</h2>
-                <p><strong>CEO:</strong> Abdulhafiz Haruna Garba Kaita</p>
-                <p><strong>Email:</strong> gizmoofficeplus@gmail.com</p>
-                <p><strong>Phone:</strong> 08161483851</p>
-                <p><strong>Address:</strong> NO. 24, KOFAR KAURA Upstairs Gafai Communication, KATSINA, KATSINA STATE, NIGERIA</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Preview -->
-    <section class="services">
-        <div class="container">
-            <h2 class="section-title">Our Services</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-laptop"></i>
-                        </div>
-                        <h4>Computer Sales & Repairs</h4>
-                        <p>Sales of computers, accessories, repairs and maintenance services with expertise in hardware and software issues.</p>
-                        <a href="services.html" class="btn btn-outline-primary mt-3">Learn More</a>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-network-wired"></i>
-                        </div>
-                        <h4>Networking Solutions</h4>
-                        <p>Infrastructure development, internet and Wi-Fi installations, network design and implementation.</p>
-                        <a href="services.html" class="btn btn-outline-primary mt-3">Learn More</a>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <h4>Security Systems</h4>
-                        <p>Cybersecurity services, security system installations, threat protection and monitoring solutions.</p>
-                        <a href="services.html" class="btn btn-outline-primary mt-3">Learn More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="text-center mt-4">
-                <a href="services.html" class="btn btn-primary">View All Services</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Mission & Vision -->
-    <section class="py-5">
+    <!-- Contact Content -->
+    <section class="page-content">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 mb-4">
-                    <div class="service-card">
-                        <h3>Our Mission</h3>
-                        <p>To bridge the digital divide by providing accessible technology, literacy, and promoting entrepreneurship. We strive for 100% customer satisfaction by delivering quality services and maintaining an unwavering commitment to ongoing development.</p>
+                <div class="col-lg-8">
+                    <div class="contact-card">
+                        <h3 class="section-title">Send Us a Message</h3>
+                        <form action="mailto:gizmoofficeplus@gmail.com">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="name" class="form-label">Your Name</label>
+                                    <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="email" class="form-label">Your Email</label>
+                                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <label for="subject" class="form-label">Subject</label>
+                                    <input type="text" class="form-control" id="subject" placeholder="Enter subject">
+                                </div>
+                                <div class="col-12 mb-3">
+                                    <label for="message" class="form-label">Your Message</label>
+                                    <textarea class="form-control" id="message" rows="5" placeholder="Enter your message" required></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
-                <div class="col-lg-6 mb-4">
-                    <div class="service-card">
-                        <h3>Our Vision</h3>
-                        <p>To establish ourselves as a prominent entity in technological solutions, creating unconditional response from our targeted culture. We aspire to be the leading automation partner with a unique experience in implementation and growth.</p>
+                <div class="col-lg-4">
+                    <div class="contact-card">
+                        <h3 class="section-title">Contact Information</h3>
+                        <div class="contact-info">
+                            <p><i class="fas fa-map-marker-alt contact-icon"></i> NO. 24, KOFAR KAURA Upstairs Gafai Communication, KATSINA, KATSINA STATE, NIGERIA</p>
+                            <p><i class="fas fa-envelope contact-icon"></i> gizmoofficeplus@gmail.com</p>
+                            <p><i class="fas fa-phone contact-icon"></i> +2348138752793, +2348133174290, +2347088242716</p>
+                            <p><i class="fas fa-clock contact-icon"></i> Mon-Fri: 9:00 AM - 6:00 PM</p>
+                        </div>
+                        <div class="social-icons mt-4">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Community Initiatives -->
-    <section class="services">
-        <div class="container">
-            <h2 class="section-title">Community Initiatives</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="service-card">
-                        <h4>Unlocking the Potential of Our Children</h4>
-                        <p>A program focused on digital literacy and entrepreneurship for the younger generation.</p>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="service-card">
-                        <h4>Dreams to Reality</h4>
-                        <p>A transformative program for secondary schools to inspire and equip students with technological skills.</p>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="service-card">
-                        <h4>Empowering Katsina State's Future Leaders</h4>
-                        <p>Initiatives to develop the next generation of leaders through technology education.</p>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="service-card">
-                        <h4>Some of our clients</h4>
-                        <p>Katsina State Government House</p>
-                        <p>Katsina State Intitute if Technology and Management</p>
-                        <p>Katsina State Internal Revenue Services</p>
-                        <p>Katsina State Little Angels School</p>
-                        <p>And more ..............</p>
-                    </div>
+                    
+                
                 </div>
             </div>
         </div>
@@ -430,6 +338,9 @@
                 document.querySelector('.navbar').style.padding = '15px 0';
             }
         });
+        
+        // Simple form validation
+        
     </script>
 </body>
 </html>

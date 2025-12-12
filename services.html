@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gizmo Dan Kaita Office Plus - ICT Solutions & Services</title>
+    <title>Our Services - Gizmo Dan Kaita Office Plus</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+        /* Same styles as homepage */
         :root {
             --primary: #2c3e50;
             --secondary: #3498db;
@@ -45,36 +46,15 @@
             color: white !important;
         }
         
-        .hero {
+        .page-hero {
             background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
             color: white;
-            padding: 120px 0 80px;
+            padding: 120px 0 60px;
             text-align: center;
         }
         
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
-        
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto 30px;
-        }
-        
-        .btn-primary {
-            background-color: var(--accent);
-            border: none;
-            padding: 12px 30px;
-            font-weight: 600;
-            transition: all 0.3s;
-        }
-        
-        .btn-primary:hover {
-            background-color: #c0392b;
-            transform: translateY(-2px);
+        .page-content {
+            padding: 80px 0;
         }
         
         .section-title {
@@ -90,11 +70,6 @@
             height: 4px;
             background: var(--secondary);
             margin: 15px auto;
-        }
-        
-        .services {
-            background-color: var(--light);
-            padding: 80px 0;
         }
         
         .service-card {
@@ -116,6 +91,27 @@
             font-size: 3rem;
             color: var(--secondary);
             margin-bottom: 20px;
+        }
+        
+        .service-features {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+            margin-top: 20px;
+        }
+        
+        .service-features li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .service-features li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+            font-weight: bold;
         }
         
         footer {
@@ -186,31 +182,9 @@
             color: rgba(255,255,255,0.7);
         }
         
-        .company-info {
-            background: white;
-            border-radius: 10px;
-            padding: 30px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            margin-bottom: 30px;
-        }
-        
-        .rc-number {
-            background: var(--secondary);
-            color: white;
-            padding: 5px 15px;
-            border-radius: 5px;
-            display: inline-block;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-        
         @media (max-width: 768px) {
-            .hero h1 {
+            .page-hero h1 {
                 font-size: 2.5rem;
-            }
-            
-            .hero p {
-                font-size: 1rem;
             }
         }
     </style>
@@ -226,18 +200,18 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Home</a>
+                        <a class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="about.html">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="services.html">Services</a>
+                        <a class="nav-link active" href="services.html">Services</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="team.html">Senior Management</a>
                     </li>
-                    <<!-- li class="nav-item">
+                   <!--  <li class="nav-item">
                         <a class="nav-link" href="departments.html">Departments</a>
                     </li> -->
                     <li class="nav-item">
@@ -248,123 +222,211 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- Page Hero -->
+    <section class="page-hero">
         <div class="container">
-            <h1>Your Automation Partner</h1>
-            <p>Dedicated to improving businesses and communities through innovative ICT solutions. We bridge the digital divide by providing accessible technology, literacy, and promoting entrepreneurship.</p>
-            <a href="services.html" class="btn btn-primary btn-lg">Explore Our Services</a>
+            <h1>Our Services</h1>
+            <p class="lead">Comprehensive ICT solutions for businesses and individuals</p>
         </div>
     </section>
 
-    <!-- Company Info -->
-    <section class="py-5">
+    <!-- Services Content -->
+    <section class="page-content">
         <div class="container">
-            <div class="company-info">
-                <div class="rc-number">RC. 7343096</div>
-                <h2>Gizmo Dan Kaita Office Plus</h2>
-                <p><strong>CEO:</strong> Abdulhafiz Haruna Garba Kaita</p>
-                <p><strong>Email:</strong> gizmoofficeplus@gmail.com</p>
-                <p><strong>Phone:</strong> 08161483851</p>
-                <p><strong>Address:</strong> NO. 24, KOFAR KAURA Upstairs Gafai Communication, KATSINA, KATSINA STATE, NIGERIA</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Preview -->
-    <section class="services">
-        <div class="container">
-            <h2 class="section-title">Our Services</h2>
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-12">
+                    <h2 class="section-title">What We Offer</h2>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
                     <div class="service-card">
                         <div class="service-icon">
                             <i class="fas fa-laptop"></i>
                         </div>
-                        <h4>Computer Sales & Repairs</h4>
-                        <p>Sales of computers, accessories, repairs and maintenance services with expertise in hardware and software issues.</p>
-                        <a href="services.html" class="btn btn-outline-primary mt-3">Learn More</a>
+                        <h4>Computer Sales & Accessories</h4>
+                        <p>We offer servers, computers, and accessories sourced from both local and international markets. We provide quality hardware with commitment to service.</p>
+                        <ul class="service-features">
+                            <li>PC, Server & Storage solutions</li>
+                            <li>Computer parts and accessories</li>
+                            <li>Quality hardware sourcing</li>
+                            <li>Delivery and installation</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-lg-4 col-md-6">
                     <div class="service-card">
                         <div class="service-icon">
                             <i class="fas fa-network-wired"></i>
                         </div>
                         <h4>Networking Solutions</h4>
-                        <p>Infrastructure development, internet and Wi-Fi installations, network design and implementation.</p>
-                        <a href="services.html" class="btn btn-outline-primary mt-3">Learn More</a>
+                        <p>Total project management covering architectural design, integration, system development, and migration with world-class methodologies.</p>
+                        <ul class="service-features">
+                            <li>Infrastructure development</li>
+                            <li>Data Centre solutions</li>
+                            <li>Structured cabling systems</li>
+                            <li>Switches, firewalls, routers</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-lg-4 col-md-6">
                     <div class="service-card">
                         <div class="service-icon">
                             <i class="fas fa-shield-alt"></i>
                         </div>
-                        <h4>Security Systems</h4>
-                        <p>Cybersecurity services, security system installations, threat protection and monitoring solutions.</p>
-                        <a href="services.html" class="btn btn-outline-primary mt-3">Learn More</a>
+                        <h4>Cybersecurity Services</h4>
+                        <p>Comprehensive threat protection and security solutions to safeguard your digital assets and information.</p>
+                        <ul class="service-features">
+                            <li>Threat protection services</li>
+                            <li>Security assessments</li>
+                            <li>Vulnerability management</li>
+                            <li>Security monitoring</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h4>Computer Repairs & Maintenance</h4>
+                        <p>Expert diagnosis and resolution of hardware and software issues, from simple fixes to complex problems.</p>
+                        <ul class="service-features">
+                            <li>Hardware repairs</li>
+                            <li>Software troubleshooting</li>
+                            <li>Preventive maintenance</li>
+                            <li>Device management</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-wifi"></i>
+                        </div>
+                        <h4>Internet & Wi-Fi Installations</h4>
+                        <p>We provide cost-effective, technologically defined internet connections for personal and commercial use with secured services.</p>
+                        <ul class="service-features">
+                            <li>Personal and commercial solutions</li>
+                            <li>Video streaming optimization</li>
+                            <li>E-commerce connectivity</li>
+                            <li>Competitive pricing</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-camera-security"></i>
+                        </div>
+                        <h4>Security System Installations</h4>
+                        <p>Design, installation, and maintenance of security systems that integrate physical security devices and electronic technology.</p>
+                        <ul class="service-features">
+                            <li>Security gadgets installation</li>
+                            <li>Customized security solutions</li>
+                            <li>System maintenance</li>
+                            <li>Integration services</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h4>Graphic Design & Branding</h4>
+                        <p>Creative design solutions to establish and enhance your brand identity across various media platforms.</p>
+                        <ul class="service-features">
+                            <li>Logo design</li>
+                            <li>Brand identity development</li>
+                            <li>Marketing materials</li>
+                            <li>Digital graphics</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h4>ICT Training</h4>
+                        <p>Comprehensive training programs to enhance digital literacy and technical skills for individuals and organizations.</p>
+                        <ul class="service-features">
+                            <li>Digital literacy programs</li>
+                            <li>Technical skills development</li>
+                            <li>Certification preparation</li>
+                            <li>Customized training</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h4>ICT Support & Services</h4>
+                        <p>Our highly experienced professionals provide efficient troubleshooting for computers, network infrastructures, and peripheral equipment.</p>
+                        <ul class="service-features">
+                            <li>Rapid response times</li>
+                            <li>Network infrastructure support</li>
+                            <li>Hardware troubleshooting</li>
+                            <li>Competitive pricing</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h4>ICT Consultancy</h4>
+                        <p>Strategic consulting for high-end technology implementation, offering planning, assessment, and comprehensive audits.</p>
+                        <ul class="service-features">
+                            <li>Strategic planning</li>
+                            <li>Technology assessment</li>
+                            <li>Procurement guidance</li>
+                            <li>Re-engineering solutions</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-boxes"></i>
+                        </div>
+                        <h4>General Merchandise Supply</h4>
+                        <p>Reliable supply of various merchandise and office equipment to meet diverse business needs.</p>
+                        <ul class="service-features">
+                            <li>Office equipment</li>
+                            <li>Business supplies</li>
+                            <li>Contract supplies</li>
+                            <li>Timely delivery</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h4>Managed Services</h4>
+                        <p>Comprehensive managed IT services to ensure your technology infrastructure runs smoothly and efficiently.</p>
+                        <ul class="service-features">
+                            <li>Proactive monitoring</li>
+                            <li>Regular maintenance</li>
+                            <li>Performance optimization</li>
+                            <li>24/7 support availability</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-            <div class="text-center mt-4">
-                <a href="services.html" class="btn btn-primary">View All Services</a>
-            </div>
-        </div>
-    </section>
 
-    <!-- Mission & Vision -->
-    <section class="py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 mb-4">
-                    <div class="service-card">
-                        <h3>Our Mission</h3>
-                        <p>To bridge the digital divide by providing accessible technology, literacy, and promoting entrepreneurship. We strive for 100% customer satisfaction by delivering quality services and maintaining an unwavering commitment to ongoing development.</p>
-                    </div>
-                </div>
-                <div class="col-lg-6 mb-4">
-                    <div class="service-card">
-                        <h3>Our Vision</h3>
-                        <p>To establish ourselves as a prominent entity in technological solutions, creating unconditional response from our targeted culture. We aspire to be the leading automation partner with a unique experience in implementation and growth.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Community Initiatives -->
-    <section class="services">
-        <div class="container">
-            <h2 class="section-title">Community Initiatives</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="service-card">
-                        <h4>Unlocking the Potential of Our Children</h4>
-                        <p>A program focused on digital literacy and entrepreneurship for the younger generation.</p>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="service-card">
-                        <h4>Dreams to Reality</h4>
-                        <p>A transformative program for secondary schools to inspire and equip students with technological skills.</p>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="service-card">
-                        <h4>Empowering Katsina State's Future Leaders</h4>
-                        <p>Initiatives to develop the next generation of leaders through technology education.</p>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="service-card">
-                        <h4>Some of our clients</h4>
-                        <p>Katsina State Government House</p>
-                        <p>Katsina State Intitute if Technology and Management</p>
-                        <p>Katsina State Internal Revenue Services</p>
-                        <p>Katsina State Little Angels School</p>
-                        <p>And more ..............</p>
-                    </div>
+            <div class="row mt-5">
+                <div class="col-12 text-center">
+                    <h3>Ready to Get Started?</h3>
+                    <p class="lead">Contact us today to discuss how we can help you achieve your technology goals</p>
+                    <a href="contact.html" class="btn btn-primary btn-lg">Get In Touch</a>
                 </div>
             </div>
         </div>
